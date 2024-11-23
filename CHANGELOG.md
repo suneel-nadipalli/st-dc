@@ -1,6 +1,12 @@
 # Changelog
 
-## [1.0.1] - 2024-11-23
+## [1.1.1] - 2024-11-23
+
+### Notebook support
+
+- Added support for Jupyter notebooks
+
+## [1.1.0] - 2024-11-23
 
 ### README.md change
 

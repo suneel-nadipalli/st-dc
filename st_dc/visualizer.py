@@ -1,10 +1,16 @@
 import plotly.graph_objects as go
+import plotly.io as pio
+from itertools import cycle
 import random
+import os
 
 class EmbeddingVisualizer:
-    @staticmethod
+    def __init__(self):
+        # Check if running in Colab
+        self.is_colab = "COLAB_GPU" in os.environ
+
     def plot_focus_and_neighbors(
-        focus_embeddings, focus_labels, neighbors, title, plot_type="3D"
+        self, focus_embeddings, focus_labels, neighbors, title, plot_type="3D"
     ):
         """
         Plot embeddings for the focus word and its nearest neighbors in 2D or 3D.
@@ -40,7 +46,7 @@ class EmbeddingVisualizer:
                         z=[focus_embedding[2]],
                         mode="markers",
                         marker=dict(size=10, color=color, symbol="circle"),
-                        name=f"{label}"
+                        name=f"Context {i+1}: {label}"
                     )
                 )
             elif plot_type == "2D":
@@ -102,4 +108,12 @@ class EmbeddingVisualizer:
                 showlegend=True
             )
 
+        # Render visualization differently based on the environment
+        if self.is_colab:
+            pio.renderers.default = "colab"
+        else:
+            pio.renderers.default = "browser"
+
+        # Show the plot
+        pio.show(fig)
         return fig

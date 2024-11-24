@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.2] - 2024-11-23
+
+### Notebook support fixed
+
+- Fixed double viz bug with Jupyter notebooks
+
 ## [1.1.1] - 2024-11-23
 
 ### Notebook support

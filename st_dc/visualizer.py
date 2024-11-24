@@ -115,5 +115,5 @@ class EmbeddingVisualizer:
             pio.renderers.default = "browser"
 
         # Show the plot
-        # pio.show(fig)
+        pio.show(fig)
         return fig

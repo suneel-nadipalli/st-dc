@@ -33,7 +33,7 @@ def viz(word, sentences, dim_technique="pca", num_neighbors=5, plot_type="3D"):
     # Step 3: Visualize the embeddings
     visualizer = EmbeddingVisualizer()
 
-    fig = visualizer.plot_focus_and_neighbors(
+    visualizer.plot_focus_and_neighbors(
         focus_embeddings=reduced_focus_embeddings,
         focus_labels=sentences,  # Sentences serve as labels for focus word contexts
         neighbors=[
@@ -43,6 +43,3 @@ def viz(word, sentences, dim_technique="pca", num_neighbors=5, plot_type="3D"):
         title=f"Focus Word: {word} | {plot_type} Viz",
         plot_type=plot_type
     )
-
-    # Show the plot
-    fig.show()

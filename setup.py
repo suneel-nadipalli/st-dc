@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="st_dc",  # Your package name
-    version="1.1.3",  # Package version
+    version="1.1.4",  # Package version
     description="Same Text, Different Context: A package for visualizing contextual word embeddings",
     long_description=open("README.md").read(),  # Use README.md for detailed description
     long_description_content_type="text/markdown",

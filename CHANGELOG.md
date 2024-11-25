@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.4] - 2024-11-23
+
+### Version update
+
+- Updated version before pushing
+
 ## [1.1.3] - 2024-11-23
 
 ### Notebook Actually Fixed
